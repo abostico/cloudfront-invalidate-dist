@@ -2,7 +2,7 @@ service: cloudfront-invalidate-dist
 
 provider:
   name: aws
-  runtime: ${opt:runtime, 'nodejs12.x'}
+  runtime: 'nodejs14.x'
   memorySize: 128
   timeout: 30
   stage: ${opt:stage, 'dev'}
@@ -15,6 +15,11 @@ provider:
         - "codepipeline:PutJobSuccessResult"
         - "cloudfront:CreateInvalidation"
       Resource: "*"
+
+package:
+  patterns:
+    - '!**/*'
+    - handler.js
 
 functions:
   invalidate:

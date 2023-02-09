@@ -1,6 +1,6 @@
 {
   "name": "cloudfront-invalidate-dist",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lambda function to be invoked by AWS CodePipeline to invalidate specified paths from a CloudFront distribution.",
   "main": "index.js",
   "directories": {
@@ -26,10 +26,7 @@
     "url": "https://github.com/jweyrich/cloudfront-invalidate-dist/issues"
   },
   "homepage": "https://github.com/jweyrich/cloudfront-invalidate-dist#readme",
-  "dependencies": {
-    "serverless-python-requirements": "^4.2.5"
-  },
   "devDependencies": {
-    "aws-sdk": "^2.653.0"
+    "aws-sdk": "^2.1159.0"
   }
 }
